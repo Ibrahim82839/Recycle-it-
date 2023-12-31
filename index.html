@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recycling Guide</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f0f0f0;
+      color: #333;
+      text-align: center;
+      margin: 20px;
+    }
+
+    h1 {
+      color: #4285f4;
+    }
+
+    .recycle-item {
+      padding: 15px;
+      margin: 15px;
+      cursor: pointer;
+      border: 2px solid #4285f4;
+      border-radius: 10px;
+      display: inline-block;
+      background-color: #fff;
+      transition: background-color 0.3s, transform 0.2s;
+    }
+
+    .recycle-item:hover {
+      background-color: #4285f4;
+      color: #fff;
+      transform: scale(1.1);
+    }
+
+    #recycle-info {
+      margin-top: 30px;
+      padding: 20px;
+      background-color: #4285f4;
+      color: #fff;
+      border-radius: 10px;
+      text-align: left;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.5s, transform 0.5s;
+    }
+
+    #recycle-info.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</script>
+function showInfo(item) {
+      var infoDiv = document.getElementById('recycle-info');
+      switch(item) {
+        // ... (cases for each material)
+      }
+
+      // Add 'active' class to trigger animations
+      infoDiv.classList.add('active');
+
+      // Scroll to the recycling information section
+      infoDiv.scrollIntoView({ behavior: 'smooth' });
+
+      // Remove 'active' class after 20 seconds
+      setTimeout(() => {
+        infoDiv.classList.remove('active');
+      }, 20000); // 20 seconds timeout
+    }
+  </script>
+</head>
+<body>
+
+  <h1>Recycling Guide</h1>
+
+  <div class="recycle-item" onclick="showInfo('Paper')">Paper</div>
+  <div class="recycle-item" onclick="showInfo('Cardboard')">Cardboard</div>
+  <div class="recycle-item" onclick="showInfo('Glass')">Glass</div>
+  <div class="recycle-item" onclick="showInfo('Plastic Bottles')">Plastic Bottles</div>
+  <div class="recycle-item" onclick="showInfo('Aluminum Cans')">Aluminum Cans</div>
+  <div class="recycle-item" onclick="showInfo('Plastic Bags')">Plastic Bags</div>
+  <div class="recycle-item" onclick="showInfo('Foil')">Foil</div>
+  <div class="recycle-item" onclick="showInfo('Food')">Food</div>
+  <div class="recycle-item" onclick="showInfo('Bubble Wrap')">Bubble Wrap</div>
+  <div class="recycle-item" onclick="showInfo('Egg Cartons')">Egg Cartons</div>
+  <div class="recycle-item" onclick="showInfo('Milk Cartons')">Milk Cartons</div>
+  <div class="recycle-item" onclick="showInfo('Batteries')">Batteries</div>
+  <div class="recycle-item" onclick="showInfo('Newspapers')">Newspapers</div>
+  <div class="recycle-item" onclick="showInfo('Fluorescent Tubes')">Fluorescent Tubes</div>
+  <div class="recycle-item" onclick="showInfo('Garden Waste')">Garden Waste</div>
+
+  <div id="recycle-info"></div>
+
+  <script>
+    function showInfo(item) {
+      var infoDiv = document.getElementById('recycle-info');
+      switch(item) {
+        case 'Paper':
+          infoDiv.innerHTML = `<h2>Ways to Recycle Paper:</h2><ul><li>1. Place in the paper recycling bin.</li><li>2. Avoid contamination with food or liquids.</li><li>3. Ensure it's free from non-paper materials like stickers.</li></ul>`;
+          break;
+        case 'Cardboard':
+          infoDiv.innerHTML = `<h2>Ways to Recycle Cardboard:</h2><ul><li>1. Flatten cardboard boxes before recycling.</li><li>2. Remove any tape or labels.</li><li>3. Check with local guidelines for large cardboard disposal.</li></ul>`;
+          break;
+        case 'Glass':
+          infoDiv.innerHTML = `<h2>Ways to Recycle Glass:</h2><ul><li>1. Rinse glass containers thoroughly.</li><li>2. Separate colors if required.</li><li>3. Do not include broken glass.</li></ul>`;
+          break;
+        case 'Plastic Bottles':
+          infoDiv.innerHTML = `<h2>Ways to Recycle Plastic Bottles:</h2><ul><li>1. Empty and rinse bottles before recycling.</li><li>2. Check the recycling number to ensure it's accepted.</li><li>3. Replace the cap before recycling.</li></ul>`;
+          break;
+        case 'Aluminum Cans':
+          infoDiv.innerHTML = `<h2>Ways to Recycle Aluminum Cans:</h2><ul><li>1. Crush cans to save space.</li><li>2. Rinse to remove any residue.</li><li>3. Check if local recycling program accepts aluminum foil.</li></ul>`;
+          break;
+        case 'Plastic Bags':
+          infoDiv.innerHTML = `<h2>Ways to Recycle Plastic Bags:</h2><ul><li>1. Bring to designated plastic bag recycling bins in grocery stores.</li><li>2. Avoid putting them in curbside recycling bins.</li><li>3. Ensure bags are clean and dry.</li></ul>`;
+          break;
+        case 'Foil':
+          infoDiv.innerHTML = `<h2>Ways to Recycle Foil:</h2><ul><li>1. Clean and flatten aluminum foil.</li><li>2. Avoid recycling heavily soiled foil.</li><li>3. Check with local recycling guidelines.</li></ul>`;
+          break;
+        case 'Food':
+          infoDiv.innerHTML = `<h2>Ways to Recycle Food:</h2><ul><li>1. Compost food waste if possible.</li><li>2. Use a food waste disposal system.</li><li>3. Check local guidelines for food container recycling.</li></ul>`;
+          break;
+        case 'Bubble Wrap':
+          infoDiv.innerHTML = `<h2>Ways to Recycle Bubble Wrap:</h2><ul><li>1. Reuse bubble wrap when possible.</li><li>2. Some recycling centers accept bubble wrap; check with local facilities.</li><li>3. Dispose in plastic bag recycling bins.</li></ul>`;
+          break;
+        case 'Egg Cartons':
+          infoDiv.innerHTML = `<h2>Ways to Recycle Egg Cartons:</h2><ul><li>1. Check if cartons are labeled recyclable.</li><li>2. Some facilities accept paper cartons; confirm with local guidelines.</li><li>3. Compost if made from recycled paper.</li></ul>`;
+          break;
+        case 'Milk Cartons':
+          infoDiv.innerHTML =infoDiv.innerHTML = `<h2>Ways to Recycle Milk Cartons:</h2><ul><li>1. Rinse and remove caps before recycling.</li><li>2. Some recycling programs accept milk cartons; verify locally.</li><li>3. Flatten to save space in recycling bins.</li></ul>`;
+          break;
+        case 'Batteries':
+          infoDiv.innerHTML = `<h2>Ways to Recycle Batteries:</h2><ul><li>1. Use battery recycling programs at local stores.</li><li>2. Some municipalities have designated battery drop-off locations.</li><li>3. Do not dispose of batteries in regular trash.</li></ul>`;
+          break;
+        case 'Newspapers':
+          infoDiv.innerHTML = `<h2>Ways to Recycle Newspapers:</h2><ul><li>1. Keep newspapers dry to avoid contamination.</li><li>2. Remove plastic sleeves before recycling.</li><li>3. Bundle newspapers for easier collection.</li></ul>`;
+          break;
+        case 'Fluorescent Tubes':
+          infoDiv.innerHTML = `<h2>Ways to Recycle Fluorescent Tubes:</h2><ul><li>1. Take fluorescent tubes to special collection sites.</li><li>2. Many home improvement stores accept used tubes.</li><li>3. Handle with care to avoid breakage.</li></ul>`;
+          break;
+        case 'Garden Waste':
+          infoDiv.innerHTML = `<h2>Ways to Recycle Garden Waste:</h2><ul><li>1. Compost garden waste if suitable.</li><li>2. Some areas offer curbside collection for yard waste.</li><li>3. Avoid mixing with other types of waste.</li></ul>`;
+          break;
+        default:
+          infoDiv.innerHTML = `<p>No recycling information available for ${item}.</p>`;
+      }
+
+      // Add 'active' class to trigger animations
+      infoDiv.classList.add('active');
+
+      // Scroll to the recycling information section
+      infoDiv.scrollIntoView({ behavior: 'smooth' });
+
+      // Remove 'active' class after animations complete
+      setTimeout(() => {
+        infoDiv.classList.remove('active');
+      }, 1000); // Adjust the timeout based on your animation duration
+    }
+  </script>
+
+</body>
+</html>
